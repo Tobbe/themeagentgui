@@ -54,6 +54,7 @@
     <Compile Include="DownloadThemesForm.Designer.cs">
       <DependentUpon>DownloadThemesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemeAgentDLLWrapper.cs" />
     <Compile Include="ThemeAgentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +90,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ThemeList.cs" />
+    <Compile Include="ThemeNameIndex.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

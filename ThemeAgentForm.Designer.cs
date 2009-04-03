@@ -32,7 +32,6 @@
 			this.splitManage = new System.Windows.Forms.SplitContainer();
 			this.splitMain = new System.Windows.Forms.SplitContainer();
 			this.splitList = new System.Windows.Forms.SplitContainer();
-			this.listThemes = new System.Windows.Forms.ListView();
 			this.splitTheme = new System.Windows.Forms.SplitContainer();
 			this.picPreview = new System.Windows.Forms.PictureBox();
 			this.lblAuthor = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
 			this.btnInstall = new System.Windows.Forms.Button();
 			this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
 			this.btnQuitManage = new System.Windows.Forms.Button();
+			this.listThemes = new System.Windows.Forms.ListBox();
 			this.splitManage.Panel1.SuspendLayout();
 			this.splitManage.Panel2.SuspendLayout();
 			this.splitManage.SuspendLayout();
@@ -138,15 +138,6 @@
 			this.splitList.Size = new System.Drawing.Size(566, 314);
 			this.splitList.SplitterDistance = 188;
 			this.splitList.TabIndex = 0;
-			// 
-			// listThemes
-			// 
-			this.listThemes.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.listThemes.Location = new System.Drawing.Point(0, 0);
-			this.listThemes.Name = "listThemes";
-			this.listThemes.Size = new System.Drawing.Size(188, 314);
-			this.listThemes.TabIndex = 0;
-			this.listThemes.UseCompatibleStateImageBehavior = false;
 			// 
 			// splitTheme
 			// 
@@ -289,6 +280,16 @@
 			this.btnQuitManage.UseVisualStyleBackColor = true;
 			this.btnQuitManage.Click += new System.EventHandler(this.btnQuitManage_Click);
 			// 
+			// listThemes
+			// 
+			this.listThemes.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.listThemes.FormattingEnabled = true;
+			this.listThemes.IntegralHeight = false;
+			this.listThemes.Location = new System.Drawing.Point(0, 0);
+			this.listThemes.Name = "listThemes";
+			this.listThemes.Size = new System.Drawing.Size(188, 314);
+			this.listThemes.TabIndex = 0;
+			// 
 			// ThemeAgentForm
 			// 
 			this.AcceptButton = this.btnSet;
@@ -338,7 +339,6 @@
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
 		private System.Windows.Forms.Button btnQuitManage;
 		private System.Windows.Forms.SplitContainer splitList;
-		private System.Windows.Forms.ListView listThemes;
 		private System.Windows.Forms.SplitContainer splitTheme;
 		private System.Windows.Forms.FlowLayoutPanel flowTheme;
 		private System.Windows.Forms.Button btnUninstall;
@@ -346,6 +346,7 @@
 		private System.Windows.Forms.Label lblName;
 		private System.Windows.Forms.PictureBox picPreview;
 		private System.Windows.Forms.Label lblAuthor;
+		private System.Windows.Forms.ListBox listThemes;
 
 	}
 }

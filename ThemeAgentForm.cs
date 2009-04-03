@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.ComponentModel;
+using ThemeAgentModel;
 
 namespace ThemeAgentGUI
 {
 	public partial class ThemeAgentForm : Form
 	{
-		public ThemeAgentForm()
+		BindingList<ThemeNameIndex> data = null;
+
+		public ThemeAgentForm(BindingList<ThemeNameIndex> data)
 		{
+			this.data = data;
 			InitializeComponent();
 		}
 
@@ -19,6 +24,9 @@ namespace ThemeAgentGUI
 		{
 			this.Height = 430;
 			this.ActiveControl = btnQuitManage;
+			this.listThemes.DataSource = data;
+			this.listThemes.DisplayMember = "Name";
+			this.listThemes.ValueMember = "Index";
 		}
 
 		private void ThemeAgentForm_Layout(object sender, LayoutEventArgs e)
