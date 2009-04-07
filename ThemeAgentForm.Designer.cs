@@ -75,7 +75,7 @@
 			this.lblManage.Margin = new System.Windows.Forms.Padding(3);
 			this.lblManage.MinimumSize = new System.Drawing.Size(0, 56);
 			this.lblManage.Name = "lblManage";
-			this.lblManage.Size = new System.Drawing.Size(566, 56);
+			this.lblManage.Size = new System.Drawing.Size(406, 56);
 			this.lblManage.TabIndex = 9;
 			this.lblManage.Text = "Manage your LiteStep themes";
 			this.lblManage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -99,7 +99,7 @@
 			// 
 			this.splitManage.Panel2.BackColor = System.Drawing.SystemColors.Control;
 			this.splitManage.Panel2.Controls.Add(this.splitMain);
-			this.splitManage.Size = new System.Drawing.Size(566, 403);
+			this.splitManage.Size = new System.Drawing.Size(406, 353);
 			this.splitManage.SplitterDistance = 56;
 			this.splitManage.TabIndex = 10;
 			// 
@@ -118,8 +118,8 @@
 			// splitMain.Panel2
 			// 
 			this.splitMain.Panel2.Controls.Add(this.splitBottomButtons);
-			this.splitMain.Size = new System.Drawing.Size(566, 343);
-			this.splitMain.SplitterDistance = 314;
+			this.splitMain.Size = new System.Drawing.Size(406, 293);
+			this.splitMain.SplitterDistance = 264;
 			this.splitMain.TabIndex = 0;
 			// 
 			// splitList
@@ -135,8 +135,8 @@
 			// splitList.Panel2
 			// 
 			this.splitList.Panel2.Controls.Add(this.splitTheme);
-			this.splitList.Size = new System.Drawing.Size(566, 314);
-			this.splitList.SplitterDistance = 188;
+			this.splitList.Size = new System.Drawing.Size(406, 264);
+			this.splitList.SplitterDistance = 134;
 			this.splitList.TabIndex = 0;
 			// 
 			// listThemes
@@ -146,7 +146,7 @@
 			this.listThemes.IntegralHeight = false;
 			this.listThemes.Location = new System.Drawing.Point(0, 0);
 			this.listThemes.Name = "listThemes";
-			this.listThemes.Size = new System.Drawing.Size(188, 314);
+			this.listThemes.Size = new System.Drawing.Size(134, 264);
 			this.listThemes.TabIndex = 0;
 			this.listThemes.SelectedIndexChanged += new System.EventHandler(this.listThemes_SelectedIndexChanged);
 			// 
@@ -168,8 +168,8 @@
 			// splitTheme.Panel2
 			// 
 			this.splitTheme.Panel2.Controls.Add(this.flowTheme);
-			this.splitTheme.Size = new System.Drawing.Size(374, 314);
-			this.splitTheme.SplitterDistance = 283;
+			this.splitTheme.Size = new System.Drawing.Size(268, 264);
+			this.splitTheme.SplitterDistance = 233;
 			this.splitTheme.TabIndex = 0;
 			// 
 			// picPreview
@@ -178,7 +178,7 @@
 			this.picPreview.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.picPreview.Location = new System.Drawing.Point(0, 37);
 			this.picPreview.Name = "picPreview";
-			this.picPreview.Size = new System.Drawing.Size(374, 246);
+			this.picPreview.Size = new System.Drawing.Size(268, 196);
 			this.picPreview.TabIndex = 2;
 			this.picPreview.TabStop = false;
 			// 
@@ -187,7 +187,7 @@
 			this.lblAuthor.Dock = System.Windows.Forms.DockStyle.Top;
 			this.lblAuthor.Location = new System.Drawing.Point(0, 21);
 			this.lblAuthor.Name = "lblAuthor";
-			this.lblAuthor.Size = new System.Drawing.Size(374, 16);
+			this.lblAuthor.Size = new System.Drawing.Size(268, 16);
 			this.lblAuthor.TabIndex = 1;
 			this.lblAuthor.Text = "Author: Theme Author";
 			// 
@@ -197,7 +197,7 @@
 			this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblName.Location = new System.Drawing.Point(0, 0);
 			this.lblName.Name = "lblName";
-			this.lblName.Size = new System.Drawing.Size(374, 21);
+			this.lblName.Size = new System.Drawing.Size(268, 21);
 			this.lblName.TabIndex = 0;
 			this.lblName.Text = "ThemeName v0.1";
 			// 
@@ -208,7 +208,7 @@
 			this.flowTheme.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.flowTheme.Location = new System.Drawing.Point(0, 0);
 			this.flowTheme.Name = "flowTheme";
-			this.flowTheme.Size = new System.Drawing.Size(374, 27);
+			this.flowTheme.Size = new System.Drawing.Size(268, 27);
 			this.flowTheme.TabIndex = 0;
 			// 
 			// btnUninstall
@@ -244,8 +244,8 @@
 			// splitBottomButtons.Panel2
 			// 
 			this.splitBottomButtons.Panel2.Controls.Add(this.flowLayoutPanel2);
-			this.splitBottomButtons.Size = new System.Drawing.Size(566, 25);
-			this.splitBottomButtons.SplitterDistance = 288;
+			this.splitBottomButtons.Size = new System.Drawing.Size(406, 25);
+			this.splitBottomButtons.SplitterDistance = 206;
 			this.splitBottomButtons.TabIndex = 0;
 			// 
 			// flowLayoutPanel1
@@ -255,7 +255,7 @@
 			this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
 			this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
 			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-			this.flowLayoutPanel1.Size = new System.Drawing.Size(288, 25);
+			this.flowLayoutPanel1.Size = new System.Drawing.Size(206, 25);
 			this.flowLayoutPanel1.TabIndex = 0;
 			// 
 			// btnInstall
@@ -277,12 +277,12 @@
 			this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
 			this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
 			this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-			this.flowLayoutPanel2.Size = new System.Drawing.Size(274, 25);
+			this.flowLayoutPanel2.Size = new System.Drawing.Size(196, 25);
 			this.flowLayoutPanel2.TabIndex = 0;
 			// 
 			// btnQuitManage
 			// 
-			this.btnQuitManage.Location = new System.Drawing.Point(197, 0);
+			this.btnQuitManage.Location = new System.Drawing.Point(119, 0);
 			this.btnQuitManage.Margin = new System.Windows.Forms.Padding(3, 0, 2, 3);
 			this.btnQuitManage.Name = "btnQuitManage";
 			this.btnQuitManage.Size = new System.Drawing.Size(75, 23);
@@ -296,10 +296,10 @@
 			this.AcceptButton = this.btnSet;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(566, 403);
+			this.ClientSize = new System.Drawing.Size(406, 353);
 			this.Controls.Add(this.splitManage);
 			this.MaximizeBox = false;
-			this.MinimumSize = new System.Drawing.Size(574, 430);
+			this.MinimumSize = new System.Drawing.Size(414, 380);
 			this.Name = "ThemeAgentForm";
 			this.Text = "ThemeAgent";
 			this.Load += new System.EventHandler(this.ThemeAgentForm_Load);

@@ -25,19 +25,18 @@ namespace ThemeAgentGUI
 
 		private void ThemeAgentForm_Load(object sender, EventArgs e)
 		{
-			this.Height = 430;
 			this.ActiveControl = btnQuitManage;
 			this.listThemes.DataSource = data;
 			this.listThemes.DisplayMember = "Name";
 			this.listThemes.ValueMember = "Index";
 
-			Binding b = new Binding("Text", at, "Name");
+			/*Binding b = new Binding("Text", at, "Name");
 			b.Format += new ConvertEventHandler(NameLabelFormat);
 			this.lblName.DataBindings.Add(b);
 
 			Binding b2 = new Binding("Text", at, "Author");
 			b2.Format += new ConvertEventHandler(AuthorLabelFormat);
-			this.lblAuthor.DataBindings.Add(b2);
+			this.lblAuthor.DataBindings.Add(b2);*/
 
 			Binding b3 = new Binding("Image", at, "Preview");
 			b3.Format += new ConvertEventHandler(PreviewPictureFormat);
@@ -78,6 +77,7 @@ namespace ThemeAgentGUI
 
 		private void PreviewPictureFormat(object sender, ConvertEventArgs cevent)
 		{
+			MessageBox.Show(">" + cevent.Value.ToString() + "<");
 			Bitmap img;
 			if (System.IO.File.Exists(cevent.Value.ToString()))
 			{
