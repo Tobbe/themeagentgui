@@ -8,13 +8,15 @@ namespace ThemeAgentModel
 	class ThemeList
 	{
 		private BindingList<ThemeNameIndex> themeList;
+		private ThemeAgentDLLWrapper.ThemeListCallback tlc;
 
 		public ThemeList()
 		{
 			themeList = new BindingList<ThemeNameIndex>();
+			tlc = this.DLLCallback;
 			try
 			{
-				ThemeAgentDLLWrapper.setThemeListCallback(this.DLLCallback);
+				ThemeAgentDLLWrapper.setThemeListCallback(tlc);
 			}
 			catch (DllNotFoundException e)
 			{

@@ -32,6 +32,7 @@
 			this.splitManage = new System.Windows.Forms.SplitContainer();
 			this.splitMain = new System.Windows.Forms.SplitContainer();
 			this.splitList = new System.Windows.Forms.SplitContainer();
+			this.listThemes = new System.Windows.Forms.ListBox();
 			this.splitTheme = new System.Windows.Forms.SplitContainer();
 			this.picPreview = new System.Windows.Forms.PictureBox();
 			this.lblAuthor = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
 			this.btnInstall = new System.Windows.Forms.Button();
 			this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
 			this.btnQuitManage = new System.Windows.Forms.Button();
-			this.listThemes = new System.Windows.Forms.ListBox();
 			this.splitManage.Panel1.SuspendLayout();
 			this.splitManage.Panel2.SuspendLayout();
 			this.splitManage.SuspendLayout();
@@ -138,6 +138,17 @@
 			this.splitList.Size = new System.Drawing.Size(566, 314);
 			this.splitList.SplitterDistance = 188;
 			this.splitList.TabIndex = 0;
+			// 
+			// listThemes
+			// 
+			this.listThemes.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.listThemes.FormattingEnabled = true;
+			this.listThemes.IntegralHeight = false;
+			this.listThemes.Location = new System.Drawing.Point(0, 0);
+			this.listThemes.Name = "listThemes";
+			this.listThemes.Size = new System.Drawing.Size(188, 314);
+			this.listThemes.TabIndex = 0;
+			this.listThemes.SelectedIndexChanged += new System.EventHandler(this.listThemes_SelectedIndexChanged);
 			// 
 			// splitTheme
 			// 
@@ -279,16 +290,6 @@
 			this.btnQuitManage.Text = "&Quit";
 			this.btnQuitManage.UseVisualStyleBackColor = true;
 			this.btnQuitManage.Click += new System.EventHandler(this.btnQuitManage_Click);
-			// 
-			// listThemes
-			// 
-			this.listThemes.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.listThemes.FormattingEnabled = true;
-			this.listThemes.IntegralHeight = false;
-			this.listThemes.Location = new System.Drawing.Point(0, 0);
-			this.listThemes.Name = "listThemes";
-			this.listThemes.Size = new System.Drawing.Size(188, 314);
-			this.listThemes.TabIndex = 0;
 			// 
 			// ThemeAgentForm
 			// 
