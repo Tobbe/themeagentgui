@@ -11,10 +11,11 @@ namespace ThemeAgentGUI
 		{
 			ThemeList tl = new ThemeList();
 			ActiveTheme at = new ActiveTheme();
+			ThemeSwitcher ts = new ThemeSwitcher();
 
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new ThemeAgentForm(tl.List, at));
+			Application.Run(new ThemeAgentForm(tl.List, at, ts));
 		}
 	}
 }

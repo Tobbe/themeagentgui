@@ -229,6 +229,7 @@
 			this.btnSet.TabIndex = 1;
 			this.btnSet.Text = "Set as theme";
 			this.btnSet.UseVisualStyleBackColor = true;
+			this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
 			// 
 			// splitBottomButtons
 			// 
@@ -265,10 +266,11 @@
 			this.btnInstall.Location = new System.Drawing.Point(2, 0);
 			this.btnInstall.Margin = new System.Windows.Forms.Padding(2, 0, 3, 3);
 			this.btnInstall.Name = "btnInstall";
-			this.btnInstall.Size = new System.Drawing.Size(99, 23);
+			this.btnInstall.Size = new System.Drawing.Size(111, 23);
 			this.btnInstall.TabIndex = 0;
-			this.btnInstall.Text = "Install new theme";
+			this.btnInstall.Text = "Install new theme...";
 			this.btnInstall.UseVisualStyleBackColor = false;
+			this.btnInstall.Click += new System.EventHandler(this.btnInstall_Click);
 			// 
 			// flowLayoutPanel2
 			// 

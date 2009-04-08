@@ -24,5 +24,11 @@ namespace ThemeAgentModel
 		[DllImport("themeagent.dll")]
 		public static extern void getActiveThemeDetails(StringBuilder name,
 			StringBuilder author, StringBuilder version, StringBuilder preview);
+
+		[DllImport("themeagent.dll")]
+		public static extern void switchTheme();
+
+		[DllImport("themeagent.dll")]
+		public static extern void installTheme(String pathToArchive);
 	}
 }

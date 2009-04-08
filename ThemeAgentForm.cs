@@ -10,11 +10,13 @@ namespace ThemeAgentGUI
 	{
 		private BindingList<ThemeNameIndex> data;
 		private ActiveTheme at;
+		private ThemeSwitcher ts;
 
-		public ThemeAgentForm(BindingList<ThemeNameIndex> data, ActiveTheme at)
+		public ThemeAgentForm(BindingList<ThemeNameIndex> data, ActiveTheme at, ThemeSwitcher ts)
 		{
 			this.data = data;
 			this.at = at;
+			this.ts = ts;
 			InitializeComponent();
 		}
 
@@ -30,15 +32,15 @@ namespace ThemeAgentGUI
 			this.listThemes.DisplayMember = "Name";
 			this.listThemes.ValueMember = "Index";
 
-			Binding b = new Binding("Text", at, "Name");
+			Binding b = new Binding("Text", at, "Name", true);
 			b.Format += new ConvertEventHandler(NameLabelFormat);
 			this.lblName.DataBindings.Add(b);
 
-			Binding b2 = new Binding("Text", at, "Author");
+			Binding b2 = new Binding("Text", at, "Author", true);
 			b2.Format += new ConvertEventHandler(AuthorLabelFormat);
 			this.lblAuthor.DataBindings.Add(b2);
 
-			Binding b3 = new Binding("Image", at, "Preview");
+			Binding b3 = new Binding("Image", at, "Preview", true);
 			b3.Format += new ConvertEventHandler(PreviewPictureFormat);
 			this.picPreview.DataBindings.Add(b3);
 		}
@@ -107,6 +109,22 @@ namespace ThemeAgentGUI
 		private void listThemes_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			at.Index = ((ThemeNameIndex)listThemes.SelectedItem).Index;
+		}
+
+		private void btnSet_Click(object sender, EventArgs e)
+		{
+			ts.SwitchTheme();
+		}
+
+		private void btnInstall_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog dialog = new OpenFileDialog();
+			dialog.Filter = "LiteStep Theme Archive (*.lsz)|*.lsz|Archive file (*.zip)|*.zip|All files (*.*)|*.*";
+			dialog.Title = "Select a LiteStep Theme Archive";
+			if (dialog.ShowDialog() == DialogResult.OK)
+			{
+				ThemeAgentDLLWrapper.installTheme(dialog.FileName);
+			}
 		}
 	}
 }

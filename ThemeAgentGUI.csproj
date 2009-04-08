@@ -93,6 +93,10 @@
     </Compile>
     <Compile Include="ThemeList.cs" />
     <Compile Include="ThemeNameIndex.cs" />
+    <Compile Include="ThemeSwitcher.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ThemeInstaller.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
