@@ -8,6 +8,7 @@ namespace ThemeAgentModel
 	{
 		public delegate void ThemeListCallback(String name, int index);
 		public delegate void ActiveThemeCallback(int index);
+		public delegate void ThemeInstallerCallback(int progress, String currentFile, bool installationDone);
 
 		[DllImport("themeagent.dll")]
 		public static extern void setThemeListCallback(ThemeListCallback tlc);
@@ -30,5 +31,8 @@ namespace ThemeAgentModel
 
 		[DllImport("themeagent.dll")]
 		public static extern void installTheme(String pathToArchive);
+
+		[DllImport("themeagent.dll")]
+		public static extern void setThemeInstallerCallback(ThemeInstallerCallback tic);
 	}
 }
