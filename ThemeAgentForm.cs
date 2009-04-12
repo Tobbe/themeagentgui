@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.ComponentModel;
 using ThemeAgentModel;
 using System.Drawing;
+using System.Threading;
 
 namespace ThemeAgentGUI
 {
@@ -11,12 +12,16 @@ namespace ThemeAgentGUI
 		private BindingList<ThemeNameIndex> data;
 		private ActiveTheme at;
 		private ThemeSwitcher ts;
+		private ThemeInstaller ti;
+		InstallProgressForm ip;
 
-		public ThemeAgentForm(BindingList<ThemeNameIndex> data, ActiveTheme at, ThemeSwitcher ts)
+		public ThemeAgentForm(BindingList<ThemeNameIndex> data, ActiveTheme at, ThemeSwitcher ts, ThemeInstaller ti)
 		{
 			this.data = data;
 			this.at = at;
 			this.ts = ts;
+			this.ti = ti;
+			this.ip = new InstallProgressForm(ref ti);
 			InitializeComponent();
 		}
 
@@ -79,7 +84,6 @@ namespace ThemeAgentGUI
 
 		private void PreviewPictureFormat(object sender, ConvertEventArgs cevent)
 		{
-			//MessageBox.Show(">" + cevent.Value.ToString() + "<");
 			Bitmap img;
 			if (System.IO.File.Exists(cevent.Value.ToString()))
 			{
@@ -123,7 +127,11 @@ namespace ThemeAgentGUI
 			dialog.Title = "Select a LiteStep Theme Archive";
 			if (dialog.ShowDialog() == DialogResult.OK)
 			{
-				ThemeAgentDLLWrapper.installTheme(dialog.FileName);
+				ip.Show();
+				ip.ResetProgress();
+				ip.Hide();
+				ti.InstallTheme(dialog.FileName);
+				ip.ShowDialog();
 			}
 		}
 	}

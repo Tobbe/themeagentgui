@@ -68,6 +68,10 @@
       <DependentUpon>DownloadThemesForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="InstallProgressForm.resx">
+      <DependentUpon>InstallProgressForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemeAgentForm.resx">
       <DependentUpon>ThemeAgentForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -96,6 +100,12 @@
     <Compile Include="ThemeSwitcher.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InstallProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallProgressForm.Designer.cs">
+      <DependentUpon>InstallProgressForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemeInstaller.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
